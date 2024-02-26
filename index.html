@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RK MPC 1.0</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .container {
+            background-image: url('https://i.pinimg.com/originals/51/2a/a6/512aa6ea1995627c4806561a021ba81c.jpg');
+            background-size: cover; /* Para cobrir todo o container */
+            background-position: center; /* Para centralizar a imagem */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>RK MPC 1.0</h2>
+        <h4>Music Production Center</h4>
+        <br>
+        <div class="area-container">
+            <div id="area1" class="area"></div>
+            <div data-key="81" class="key"></div>
+            <div id="area2" class="area"></div>
+            <div data-key="87" class="key"></div>
+            <div id="area3" class="area"></div>
+            <div data-key="69" class="key"></div>
+        </div>
+        <div class="area-container">
+            <div id="area4" class="area"></div>
+            <div data-key="65" class="key"></div>
+            <div id="area5" class="area"></div>
+            <div data-key="83" class="key"></div>
+            <div id="area6" class="area"></div>
+            <div data-key="68" class="key"></div>
+        </div>
+        <div class="area-container">
+            <div id="area7" class="area"></div>
+            <div data-key="90" class="key"></div>
+            <div id="area8" class="area"></div>
+            <div data-key="88" class="key"></div>
+            <div id="area9" class="area"></div>
+            <div data-key="67" class="key"></div>
+        </div>
+        <h4>Developed by Kevin Reys</h4>
+    </div>
+
+<!-- Arquivos de som -->
+<audio data-key="81" src="sounds/snare.mp3" id="audio81"></audio> <!--Q-->
+<audio data-key="87" src="sounds/cymbal.mp3" id="audio87"></audio> <!--W-->
+<audio data-key="69" src="sounds/tom1.mp3" id="audio69"></audio> <!--E-->
+
+<audio data-key="65" src="sounds/bongo.wav" id="audio65"></audio> <!--A-->
+<audio data-key="83" src="sounds/claves.wav" id="audio83"></audio> <!--S-->
+<audio data-key="68" src="sounds/Hat.wav" id="audio68"></audio> <!--D-->
+
+<audio data-key="90" src="sounds/taiko.wav" id="audio90"></audio> <!--Z-->
+<audio data-key="88" src="sounds/tambourine.wav" id="audio88"></audio> <!--X-->
+<audio data-key="67" src="sounds/FX.wav" id="audio67"></audio> <!--C-->
+
+<script>
+    // Ouvinte de eventos de pressionamento de tecla
+document.addEventListener('keydown', function(event) {
+    // Verifica se a tecla pressionada tem um atributo data-key associado
+    const keyPressed = event.key;
+    const audio = document.querySelector(`audio[data-key="${event.keyCode}"]`);
+    const keyElement = document.querySelector(`.key[data-key="${event.keyCode}"]`);
+    
+    // Se houver um elemento de áudio correspondente e uma tecla associada, reproduza o som
+    if (audio && keyElement) {
+        audio.currentTime = 0; // Reinicia o áudio para ser reproduzido várias vezes seguidas
+        audio.play();
+        keyElement.classList.add('pressed');
+    }
+});
+
+// Adiciona um ouvinte de eventos de liberação de tecla ao documento
+document.addEventListener('keyup', function(event) {
+    const keyElement = document.querySelector(`.key[data-key="${event.keyCode}"]`);
+    // Remove a classe de animação ou destaque visual da tecla pressionada
+    if (keyElement) {
+        keyElement.classList.remove('pressed');
+    }
+});
+</script>
+<script> //VAR ÁREA
+        var area1 = window.document.getElementById('area1');
+        var area2 = window.document.getElementById('area2');
+        var area3 = window.document.getElementById('area3');
+        var area4 = window.document.getElementById('area4');
+        var area5 = window.document.getElementById('area5');
+        var area6 = window.document.getElementById('area6');
+        var area7 = window.document.getElementById('area7');
+        var area8 = window.document.getElementById('area8');
+        var area9 = window.document.getElementById('area9');
+
+
+      // Função para lidar com o evento de pressionamento de tecla
+function handleKeyPress(event) { //A função handleKeyPress é responsável por alterar a cor de fundo das áreas correspondentes quando uma tecla é pressionada. 
+    // Verifica se a tecla pressionada é a tecla desejada e altera a cor de fundo da div correspondente
+    if (event.key === 'q') {
+        area1.style.background = 'blue';
+    } else if (event.key === 'w') {
+        area2.style.background = 'blue';
+    } else if (event.key === 'e') {
+        area3.style.background = 'blue';
+    }
+    //
+    if (event.key === 'a') {
+        area4.style.background = 'blue';
+    } else if (event.key === 's') {
+        area5.style.background = 'blue';
+    } else if (event.key === 'd') {
+        area6.style.background = 'blue';
+    }
+    //
+    if (event.key === 'z') {
+        area7.style.background = 'blue';
+    } else if (event.key === 'x') {
+        area8.style.background = 'blue';
+    } else if (event.key === 'c') {
+        area9.style.background = 'blue';
+    }
+}
+        
+
+//MUDANÇA DE COR APENAS QUANDO PASSA COM O MOUSE POR CIMA
+
+//ÁREA 1 -
+        area1.addEventListener('mouseenter', function() {
+            area1.style.background = 'red';
+        });
+
+        area1.addEventListener('mouseout', function() {
+            area1.style.background = 'black';
+        });
+// ÁREA 2 - 
+        area2.addEventListener('mouseenter', function() {
+            area2.style.background = 'violet';
+        });
+
+        area2.addEventListener('mouseout', function() {
+            area2.style.background = 'black';
+        });
+//ÁREA 3 - 
+        area3.addEventListener('mouseenter', function() {
+            area3.style.background = 'pink'; 
+        });
+
+        area3.addEventListener('mouseout', function() {
+            area3.style.background = 'black'; 
+        });
+
+//ÁREA 4 - 
+        area4.addEventListener('mouseenter', function() {
+            area4.style.background = 'orange';
+        });
+
+        area4.addEventListener('mouseout', function() {
+            area4.style.background = 'black';
+        });
+// ÁREA 5 - 
+        area5.addEventListener('mouseenter', function() {
+            area5.style.background = 'grey';
+        });
+
+        area5.addEventListener('mouseout', function() {
+            area5.style.background = 'black';
+        });
+//ÁREA 6 - 
+        area6.addEventListener('mouseenter', function() {
+            area6.style.background = 'blue'; 
+        });
+
+        area6.addEventListener('mouseout', function() {
+            area6.style.background = 'black'; 
+        });
+
+//ÁREA 7 - 
+        area7.addEventListener('mouseenter', function() {
+            area7.style.background = 'yellow';
+        });
+
+        area7.addEventListener('mouseout', function() {
+            area7.style.background = 'black';
+        });
+// ÁREA 8 - 
+        area8.addEventListener('mouseenter', function() {
+            area8.style.background = 'green';
+        });
+
+        area8.addEventListener('mouseout', function() {
+            area8.style.background = 'black';
+        });
+//ÁREA 9 - 
+        area9.addEventListener('mouseenter', function() {
+            area9.style.background = 'red'; 
+        });
+
+        area9.addEventListener('mouseout', function() {
+            area9.style.background = 'black'; 
+        });
+
+
+        // Adiciona um ouvinte de eventos de pressionamento de tecla ao documento
+document.addEventListener('keypress', handleKeyPress);
+    // Função para lidar com o evento de liberação de tecla
+function handleKeyRelease(event) {
+    // Restaura as áreas ao estado original
+    area1.style.background = 'black';
+    area2.style.background = 'black';
+    area3.style.background = 'black';
+    area4.style.background = 'black';
+    area5.style.background = 'black';
+    area6.style.background = 'black';
+    area7.style.background = 'black';
+    area8.style.background = 'black';
+    area9.style.background = 'black';
+}
+
+// Adiciona ouvintes de eventos de pressionamento e liberação de tecla ao documento
+document.addEventListener('keypress', handleKeyPress);
+document.addEventListener('keyup', handleKeyRelease);
+</script>
+</body>
+</html>

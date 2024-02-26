@@ -1,0 +1,76 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos para os contêineres das áreas */
+.area-container {
+    display: flex; /* flexbox para os itens ficarem lado a lado */
+    flex-wrap: wrap; /* quebra de itens para a próxima linha quando não houver espaço suficiente */
+}
+
+/* Estilos para as áreas */
+.area {
+    background: rgb(0, 0, 0);
+    color: white;
+    border-radius: 20px; /* cantos arredondados */
+    width: 100px;
+    height: 100px;
+    margin-right: 20px; /* margem à direita para separar as áreas */
+    margin-bottom: 20px; /* margem inferior para separar as linhas */
+}
+
+/* Remove a margem direita da última área em cada linha */
+.area:nth-child(3n) {
+    margin-right: 0;
+}
+
+/* Adiciona margem à esquerda para as áreas nos blocos do meio */
+.area:nth-child(3n+2) {
+    margin-left: 20px;
+}
+
+.container {
+    /* Estilos para o contêiner */
+    border-radius: 10px; /* Cantos arredondados */
+    padding: 30px; /* Espaçamento interno de 20px */
+    width: 360px; /* Largura do contêiner */
+    margin: 0 auto; /* Centralizar horizontalmente */
+    text-align: center; /* Centralizar texto */
+    
+    /* Efeito de borda de neon azul */
+    box-shadow: 0 0 20px 5px rgba(0, 0, 255, 0.7); /* Sombra de caixa com cor azul brilhante */
+    border: 5px solid rgba(0, 0, 255, 0.7); /* Borda sólida azul brilhante */
+}
+
+.container h2 { /* RK MPC 1.0 */
+    margin: 0; /* Remover margem padrão */
+    padding: 10px 0; /* Espaçamento interno de 10px acima e abaixo */
+    font-size: 24px; /* Tamanho da fonte */
+    color: white; /* Cor do texto branca */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: xx-large;
+    margin-bottom: -25px; /* Margem inferior reduzida para aproximar do h4 */
+}
+
+.container h4 { /* DEVELOPED BY KEVIN REYS */
+    margin: 0; /* Remover margem padrão */
+    padding: 10px 0; /* Espaçamento interno de 10px acima e abaixo */
+    font-size: 20px; /* Tamanho da fonte */
+    color: white; /* Cor do texto branca */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+h2 { /* 'RK MPC 1.0' */
+    color: white; /* Define a cor do texto como branca */
+    text-shadow: 0 0 5px #00f, 0 0 10px #00f, 0 0 15px #00f, 0 0 20px #00f, 0 0 30px #00f, 0 0 40px #00f, 0 0 50px #00f, 0 0 75px #00f; /* efeito de sombra do texto com cor azul neon */
+}
+
+h4 { /* 'Music Production Center and Developed by Kevin Reys' */
+    color: white; /* Define a cor do texto como branca */
+    text-shadow: 0 0 5px #00f, 0 0 10px #00f, 0 0 15px #00f, 0 0 20px #00f, 0 0 30px #00f, 0 0 40px #00f, 0 0 50px #00f, 0 0 75px #00f; /* efeito de sombra do texto com cor azul neon */
+}
