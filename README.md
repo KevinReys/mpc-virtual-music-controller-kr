@@ -31,4 +31,4 @@ Se você gostaria de contribuir com melhorias para este conversor de temperatura
 5. Abra uma solicitação de pull request.
 
 ## Autor
-Desenvolvido por Kevin Reys.
+Este projeto foi desenvolvido por Kevin Reys.
