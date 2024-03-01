@@ -1,34 +1,34 @@
-# RK MPC 1.0
+# RKMPC1.0
 
-RK MPC 1.0 é um aplicativo web que simula um controlador de áudio estilo MPC (Music Production Center). 
-Com ele, você pode reproduzir diferentes sons de percussão usando o teclado do seu computador.
+RK MPC 1.0 is a web application that simulates an MPC (Music Production Center) style audio driver.
+With it, you can play different percussion sounds using your computer keyboard.
 
-## Recursos
-- Reproduza sons de percussão pressionando as teclas correspondentes no teclado.
-- Interface visualmente atraente.
-- Suporta múltiplos sons de percussão.
-- Feedback visual ao pressionar as teclas.
+## Resources
+- Play percussion sounds by pressing the corresponding keys on the keyboard.
+- Visually attractive interface.
+- Support multiple percussion sounds.
+- Visual feedback when starting keystrokes.
 
-## Como usar
-1. Abra o RK MPC 1.0 em seu navegador da web.
-2. Pressione as teclas no teclado do seu computador para reproduzir os sons de percussão correspondentes.
-3. Experimente diferentes combinações de teclas para criar ritmos interessantes.
-4. Divirta-se explorando e criando música!
+## How to use
+1. Open RK MPC 1.0 in your web browser.
+2. Press the keys on your computer keyboard to play the corresponding percussion sounds.
+3. Try different key combinations to create interesting rhythms.
+4. Have fun exploring and creating music!
 
-## Tecnologias utilizadas
-- HTML
-- CSS
-- JavaScript
+## Technologies used
+-HTML
+-CSS
+-JavaScript
 
-## Contribuição
-Contribuições são sempre bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request.
-Se você gostaria de contribuir com melhorias para este conversor de temperatura, você pode seguir estas etapas:
+## Contribution
+Contributions are always welcome! Feel free to open an issue or submit a pull request.
+If you want to contribute improvements to this temperature converter, you can follow these steps:
 
-1. Faça um fork deste repositório.
-2. Crie uma branch para suas alterações (`git checkout -b minha-contribuicao`).
-3. Faça commit de suas alterações (`git commit -am 'Adicionando funcionalidade X'`).
-4. Faça push para a branch (`git push origin minha-contribuicao`).
-5. Abra uma solicitação de pull request.
+1. Fork this repository.
+2. Create a branch for your changes (`git checkout -b minha-contribuicao`).
+3. Commit your changes (`git commit -am 'Adding feature X'`).
+4. Push to a branch (`git push origin my-contribution`).
+5. Open a pull request.
 
-## Autor
-Este projeto foi desenvolvido por Kevin Reys.
+## Author
+This project was developed by Kevin Reys.
